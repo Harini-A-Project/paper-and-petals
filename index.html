@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper & Petals | Stationery Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">paper <span>&</span> petals.</a>
+
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#shop">Shop</a>
+                <a href="#about">About</a>
+            </div>
+
+            <a href="#cart" class="cart-button">
+                <span>🛍️</span> Cart
+                <span id="cart-count">0</span>
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <span class="eyebrow">A LITTLE JOY IN EVERY PAGE ✿</span>
+                <h1>Make every day<br> a little more <em>beautiful.</em></h1>
+                <p>Thoughtfully picked stationery and little things that make your everyday moments special.</p>
+                <a href="#shop" class="primary-button">Explore Collection →</a>
+            </div>
+
+            <div class="hero-art">
+                <div class="hero-circle">
+                    <span>🌷</span>
+                    <span class="floating f1">✏️</span>
+                    <span class="floating f2">📒</span>
+                    <span class="floating f3">✨</span>
+                </div>
+                <p>Made for your creative days ♡</p>
+            </div>
+        </section>
+
+        <section class="shop-section" id="shop">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">THE LITTLE THINGS</span>
+                    <h2>Our lovely collection</h2>
+                    <p>Find your next favourite desk companion.</p>
+                </div>
+                <span class="product-total">8 lovely finds ✿</span>
+            </div>
+
+            <div class="category-filters">
+                <button class="filter-btn active" data-category="All">All Items</button>
+                <button class="filter-btn" data-category="Notebooks">Notebooks</button>
+                <button class="filter-btn" data-category="Writing">Writing</button>
+                <button class="filter-btn" data-category="Accessories">Accessories</button>
+            </div>
+
+            <div class="product-grid" id="product-grid">
+                <!-- Products are rendered using JavaScript -->
+            </div>
+        </section>
+
+        <section class="cart-section" id="cart">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">YOUR LITTLE COLLECTION</span>
+                    <h2>Shopping bag</h2>
+                    <p>Everything you picked, all in one place.</p>
+                </div>
+                <span class="cart-icon">🛒</span>
+            </div>
+
+            <div class="cart-container">
+                <div class="cart-items" id="cart-items">
+                    <!-- Cart items are rendered using JavaScript -->
+                </div>
+
+                <div class="cart-summary">
+                    <h3>Order Summary</h3>
+
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span id="subtotal">₹0</span>
+                    </div>
+
+                    <div class="summary-row">
+                        <span>Delivery</span>
+                        <span id="delivery">₹0</span>
+                    </div>
+
+                    <div class="summary-row total-row">
+                        <strong>Total</strong>
+                        <strong id="grand-total">₹0</strong>
+                    </div>
+
+                    <p class="delivery-note">♡ Free delivery on orders of ₹500 or more!</p>
+
+                    <button class="checkout-button" id="checkout-btn">
+                        Proceed to Checkout →
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section" id="about">
+            <span class="eyebrow">A NOTE FROM US</span>
+            <h2>Little things. Big happiness.</h2>
+            <p>Paper & Petals is a little corner for stationery lovers. We believe that beautiful things can make even ordinary days feel special.</p>
+            <span class="about-flower">✿</span>
+        </section>
+    </main>
+
+    <footer>
+        <a href="#" class="logo">paper <span>&</span> petals.</a>
+        <p>Made with ♡ for stationery lovers.</p>
+        <small>© 2026 Paper & Petals. All rights reserved.</small>
+    </footer>
+
+    <!-- Checkout Preview Modal -->
+    <dialog id="checkout-modal">
+        <div class="modal-content">
+            <button class="close-modal" id="close-modal">✕</button>
+            <span class="modal-flower">🌷</span>
+            <span class="eyebrow">JUST ONE MORE THING</span>
+            <h2>Your order preview</h2>
+            <p class="modal-description">Here's a little summary of your lovely picks.</p>
+
+            <div id="checkout-items"></div>
+
+            <div class="modal-total">
+                <span>Subtotal</span>
+                <strong id="modal-subtotal">₹0</strong>
+            </div>
+            <div class="modal-total">
+                <span>Delivery</span>
+                <strong id="modal-delivery">₹0</strong>
+            </div>
+            <div class="modal-total final-modal-total">
+                <span>Grand Total</span>
+                <strong id="modal-total">₹0</strong>
+            </div>
+
+            <p class="demo-notice">♡ This is a demonstration checkout. No payment will be collected.</p>
+
+            <button class="checkout-button" id="confirm-order">
+                Confirm Demo Order
+            </button>
+        </div>
+    </dialog>
+
+    <script src="script.js"></script>
+</body>
+</html>
